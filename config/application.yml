@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: psr-vlog
+
+server:
+  port: 8082
