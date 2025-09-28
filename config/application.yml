@@ -1,6 +1,22 @@
 spring:
   application:
     name: psr-vlog
+#    connecting mySql database using Spring Data jpa + hibernate
+  jpa:
+    hibernate:
+#      It never drops unrelated tables automatically in update mode
+      ddl-auto: update
+#      print SQL queries it executes, to the console.
+    show-sql: true
+#    database connection details
+  datasource:
+    url: jdbc:mysql://localhost:3306/psr-vlog?createDatabaseIfNotExist=true
+    username: root
+    password: Kkaa1122
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 server:
   port: 8082
+
+
+
